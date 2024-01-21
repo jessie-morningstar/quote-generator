@@ -85,3 +85,53 @@ body{
     cursor: pointer;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue;
+}
+
+.quote-box {
+    background-color: white;
+    max-width: 700px; /* Use max-width instead of width for responsiveness */
+    width: 90%; /* Adjust width for smaller screens */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; /* Reduce padding for smaller screens */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.50);
+}
+
+/* Add a media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .quote-box {
+        padding: 10px; /* Further reduce padding for small screens */
+    }
+    .quote-box h2 {
+        font-size: 24px; /* Decrease font size for small screens */
+        margin-bottom: 20px;
+    }
+    .quote-box blockquote {
+        font-size: 18px; /* Decrease font size for small screens */
+        min-height: 80px;
+    }
+    .quote-box span::before {
+        width: 15px; /* Adjust width for small screens */
+    }
+    .quote-box div {
+        margin-top: 30px;
+    }
+    .quote-box button {
+        width: 120px; /* Adjust button width for small screens */
+        height: 40px; /* Adjust button height for small screens */
+    }
+}
+
+
